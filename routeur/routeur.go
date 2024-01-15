@@ -24,7 +24,7 @@ func Serveur() {
 
 func runServer() {
 	port := "localhost:8080"
-	url := "http://" + port + "/index"
+	url := "http://" + port + "/profil"
 	go http.ListenAndServe(port, nil)
 	fmt.Println("Server is running...")
 	time.Sleep(time.Second * 3)

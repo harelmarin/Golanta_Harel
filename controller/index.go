@@ -14,7 +14,7 @@ func DataIndex(w http.ResponseWriter, r *http.Request) {
 
 func TreatmentIndex(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
-		http.Redirect(w, r, "/index", http.StatusPermanentRedirect)
+		http.Redirect(w, r, "/index", http.StatusSeeOther)
 		return
 	}
 	newCtn := Golanta.Aventuriers{
@@ -24,14 +24,14 @@ func TreatmentIndex(w http.ResponseWriter, r *http.Request) {
 	}
 	Golanta.AddAventurier(newCtn)
 
-	http.Redirect(w, r, "/profil", http.StatusPermanentRedirect)
+	http.Redirect(w, r, "/profil", http.StatusSeeOther)
 }
 
 func TreatmentDelete(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.URL.Query().Get("aventurier"))
 	if err != nil {
-		log.Fatal("log: deleteArticleTreatment() Atoi error!\n", err)
+		log.Fatal("log: TreatmentDelete() Atoi error!\n", err)
 	}
 	Golanta.DeleteAventurier(id)
-	http.Redirect(w, r, "/index", http.StatusPermanentRedirect)
+	http.Redirect(w, r, "/profil", http.StatusSeeOther)
 }

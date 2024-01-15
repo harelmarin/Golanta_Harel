@@ -84,5 +84,5 @@ func DeleteAventurier(id int) {
 		}
 	}
 	ChangeAventurier(aventurier)
-	fmt.Println("Hello")
+	fmt.Println("Suppr")
 }

@@ -6,17 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content ="IE-edge">
     <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css" />
-    <title>PROFIL</title>  
+    <title>PROFIL</title> 
 </head>
 <body>
+{{range .Aventuriers}}
 
-dgnjgj
-{{range .Aventurier}}
+Nom : {{.Nom}} <br>
+Age : {{.Age}}<br> 
+ID  : {{.ID}}<br>
 
-{{.Id}}
-{{.Nom}}
-{{.age}}
-
+<a href="/deleteaventurier?aventurier={{.ID}}"> <button> Supprimer l'Aventurier </button> </a> <br>
 {{end}}
 </body>
 {{end}}
