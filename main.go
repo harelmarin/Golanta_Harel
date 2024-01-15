@@ -6,8 +6,6 @@ import (
 )
 
 func main() {
-
 	initTemplate.InitTemplate()
 	routeur.Serveur()
-
 }
