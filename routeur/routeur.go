@@ -14,6 +14,8 @@ func Serveur() {
 	http.HandleFunc("/treatment/index", controller.TreatmentIndex)
 	http.HandleFunc("/profil", controller.DataProfil)
 	http.HandleFunc("/deleteaventurier", controller.TreatmentDelete)
+	http.HandleFunc("/modifyaventurier", controller.DataModify)
+	http.HandleFunc("/treatment/modifyaventurier", controller.TreatmentModify)
 
 	rootDoc, _ := os.Getwd()
 	fileserver := http.FileServer(http.Dir(rootDoc + "/asset"))
@@ -24,7 +26,7 @@ func Serveur() {
 
 func runServer() {
 	port := "localhost:8080"
-	url := "http://" + port + "/profil"
+	url := "http://" + port + "/index"
 	go http.ListenAndServe(port, nil)
 	fmt.Println("Server is running...")
 	time.Sleep(time.Second * 3)

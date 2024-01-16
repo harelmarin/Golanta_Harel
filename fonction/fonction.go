@@ -86,3 +86,32 @@ func DeleteAventurier(id int) {
 	ChangeAventurier(aventurier)
 	fmt.Println("Suppr")
 }
+
+func ModifyAventurier(updatedAventurier Aventuriers) {
+	aventurier, err := RetrieveAventurier()
+	if err != nil {
+		log.Fatal("log: retrieveArticles() error!\n", err)
+	}
+	for i, Aventurier := range aventurier {
+		if Aventurier.ID == updatedAventurier.ID {
+			aventurier[i] = updatedAventurier
+		}
+	}
+	ChangeAventurier(aventurier)
+}
+
+func SelectAventurier(id int) (Aventuriers, bool) {
+	var aventurier Aventuriers
+	aventuriers, err := RetrieveAventurier()
+	if err != nil {
+		log.Fatal("log: retrieveArticles() error!\n", err)
+	}
+	var ok bool
+	for _, singleAventurier := range aventuriers {
+		if singleAventurier.ID == id {
+			ok = true
+			aventurier = singleAventurier
+		}
+	}
+	return aventurier, ok
+}
