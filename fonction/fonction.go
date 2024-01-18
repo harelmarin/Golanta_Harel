@@ -119,8 +119,13 @@ func SelectAventurier(id int) (Aventuriers, bool) {
 
 func GetImgTrainer() string {
 	ImgPath := []string{
-		"/static/img/Aventurier1.png",
 		"/static/img/Aventurier2.png",
+		"/static/img/Aventurier3.png",
+		"/static/img/Aventurier4.png",
+		"/static/img/Aventurier5.png",
+		"/static/img/Aventurier6.png",
+		"/static/img/Aventurier7.png",
+		"/static/img/Aventurier8.png",
 	}
 	rand.NewSource(time.Now().UnixNano())
 	randomindex := rand.Intn(len(ImgPath))

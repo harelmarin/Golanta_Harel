@@ -20,7 +20,13 @@
 <body>
     <h1 class="h1profil"> Liste des Aventuriers : </h1>
 <section class="testwrap">
-{{range .Aventuriers}}
+    {{if not .Aventuriers}}
+    <div class="noaventurier">
+    <h1 class="h1message"> Vous n'avez pas d'aventurier </h1>
+    <a href="/index"> <button class="headerbutton"> Créer un aventurier</button> </a>
+</div>
+    {{else}}
+        {{range .Aventuriers}}
 <div class="containeraventurier">
    <img class="imgtrainer" src="{{.ImgTrainer}}">
    <div class="containernomage">
@@ -35,7 +41,8 @@
 </div>
 </div>
 {{end}}
+{{end}}
 </section>
-<a href="/index"> <button class="buttonmodif"> Créer un nouveau personnage </button> </a> <br>
+
 </body>
 {{end}}
