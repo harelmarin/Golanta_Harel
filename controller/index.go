@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"time"
 )
 
 func DataIndex(w http.ResponseWriter, r *http.Request) {
@@ -19,9 +20,12 @@ func TreatmentIndex(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	newCtn := Golanta.Aventuriers{
-		ID:  Golanta.GetIdNewAdventurer(),
-		Nom: r.FormValue("Nom"),
-		Age: r.FormValue("age"),
+		ID:         Golanta.GetIdNewAdventurer(),
+		Nom:        r.FormValue("Nom"),
+		Age:        r.FormValue("age"),
+		ImgTrainer: Golanta.GetImgTrainer(),
+		ImgStarter: Golanta.GetImgStarter(r.FormValue("starter")),
+		Date:       time.Now().Format("02/01/2006"),
 	}
 	Golanta.AddAventurier(newCtn)
 
@@ -57,9 +61,12 @@ func TreatmentModify(w http.ResponseWriter, r *http.Request) {
 		log.Fatal("log: TreatmentModify() Atoi error!\n", err)
 	}
 	newCtn := Golanta.Aventuriers{
-		ID:  idInForm,
-		Nom: r.FormValue("Nom"),
-		Age: r.FormValue("age"),
+		ID:         idInForm,
+		Nom:        r.FormValue("Nom"),
+		Age:        r.FormValue("age"),
+		ImgTrainer: Golanta.GetImgTrainer(),
+		ImgStarter: Golanta.GetImgStarter(r.FormValue("starter")),
+		Date:       time.Now().Format("02/01/2006"),
 	}
 
 	Golanta.ModifyAventurier(newCtn)

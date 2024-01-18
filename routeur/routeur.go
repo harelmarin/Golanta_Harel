@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"os/exec"
 	"time"
 )
 
@@ -30,8 +29,8 @@ func runServer() {
 	go http.ListenAndServe(port, nil)
 	fmt.Println("Server is running...")
 	time.Sleep(time.Second * 3)
-	cmd := exec.Command("explorer", url)
-	cmd.Run()
+	//cmd := exec.Command("explorer", url)
+	//cmd.Run()
 	fmt.Println("If the navigator didn't open on its own, just go to ", url, " on your browser.")
 	isRunning := true
 	for isRunning {

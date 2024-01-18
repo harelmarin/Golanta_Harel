@@ -2,11 +2,12 @@ package fonction
 
 import (
 	"encoding/json"
-	"fmt"
 	"log"
+	"math/rand"
 	"os"
 	"path/filepath"
 	"runtime"
+	"time"
 )
 
 var (
@@ -71,6 +72,7 @@ func AddAventurier(newCtn Aventuriers) {
 	}
 	aventurier = append(aventurier, newCtn)
 	ChangeAventurier(aventurier)
+
 }
 
 func DeleteAventurier(id int) {
@@ -84,7 +86,6 @@ func DeleteAventurier(id int) {
 		}
 	}
 	ChangeAventurier(aventurier)
-	fmt.Println("Suppr")
 }
 
 func ModifyAventurier(updatedAventurier Aventuriers) {
@@ -114,4 +115,30 @@ func SelectAventurier(id int) (Aventuriers, bool) {
 		}
 	}
 	return aventurier, ok
+}
+
+func GetImgTrainer() string {
+	ImgPath := []string{
+		"/static/img/Aventurier1.png",
+		"/static/img/Aventurier2.png",
+	}
+	rand.NewSource(time.Now().UnixNano())
+	randomindex := rand.Intn(len(ImgPath))
+
+	return ImgPath[randomindex]
+}
+
+func GetImgStarter(starter string) string {
+	var PathImg string
+	switch starter {
+	case "Bulbizarre":
+		PathImg = "/static/img/Bulbisar.png"
+
+	case "Salamèche":
+		PathImg = "/static/img/Salamèche.png"
+
+	case "Carapuce":
+		PathImg = "/static/img/Carapuce.png"
+	}
+	return PathImg
 }

@@ -6,9 +6,12 @@ type Session struct {
 }
 
 type Aventuriers struct {
-	ID  int    `json:"id"`
-	Nom string `json:"nom"`
-	Age string `json:"age"`
+	ID         int    `json:"id"`
+	Nom        string `json:"nom"`
+	Age        string `json:"age"`
+	ImgTrainer string `json:"imgtrainer"`
+	ImgStarter string `json:"imgstarter"`
+	Date       string `json:"date"`
 }
 
 var Aventurier Aventuriers

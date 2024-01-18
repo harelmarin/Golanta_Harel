@@ -1,0 +1,122 @@
+         
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    font-family: 'Pokemon Solid', sans-serif;                                      
+    max-width:100%;
+    height: 150px;
+    background-color: #222222;
+    box-shadow: #222222;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    font-weight: 900;
+    font-size: 50px;
+    border-bottom: 2px solid #fefefe;
+    padding-left: 50px;
+    
+}
+
+.header-title {
+    text-align: center;
+    padding-top: 80px;
+    margin-right: 200px;
+}
+
+
+.headerbutton {
+    background-color: #484e52;
+    margin-top: 15px;
+    padding: 3px;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    height:30px;
+    width: 180px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #eee2e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-left: 20px;
+}
+
+.headerbutton:hover {
+    transform: scale(1.1);
+}
+
+/* TEST */
+
+
+:root {
+  --white: #fff;
+  --gray: #eee;
+  --red: #e53935;
+  --black: #222222;
+}
+
+Base
+
+
+body {
+  background-color: var(--gray);
+}
+
+
+.pokeball {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    var(--red),
+    var(--red) 48%,
+    var(--black) 48%,
+    var(--black) 55%,
+    var(--white) 55%
+  );
+  border-radius: 50%;
+  border: 20px solid var(--black);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2), inset 8px 5px 0 rgba(0, 0, 0, 0.2);
+  animation-duration: 900ms;
+  animation-name: shake;
+  animation-iteration-count: infinite;
+}
+
+.pokeball:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+.pokeball:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: var(--white);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 15px solid var(--black);
+  box-shadow: -5px -3px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+ @keyframes shake {
+        0% { transform: translateX(0) rotate(0); }
+        15% { transform: translateX(-10px) rotate(-10deg); }
+        40% { transform: translateX(-15px) rotate(-15deg); }
+}
+
+

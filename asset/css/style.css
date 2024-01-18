@@ -1,0 +1,228 @@
+body {
+    background-color: #484e52;
+}
+.rectanglecreate{
+    padding-top: 80px;
+    background-color: #484e52;
+    display: flex;
+    justify-content: center;
+}
+
+.formcreate {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+    background-color:rgb(51, 55, 51) ;
+    border: 1px solid #fefefe;
+    border-radius: 15px;
+}
+
+h1 {
+    color: #eee2e2;
+}
+
+.inputcreate {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.name {
+    margin-top: 30px;
+   padding: 3px;
+   border: 1px solid #fefefe;
+   border-radius: 5px;
+   height:30px;
+   width: 250px;
+   text-align: center;
+   font-weight: 900;
+   background-color: #484e52;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.age {
+    margin-top: 15px;
+    padding: 3px;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    height:30px;
+    width: 250px;
+    text-align: center;
+    font-weight: 900;
+    background-color: #484e52;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.choixstarter {
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(51, 55, 51) ;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.createbutton {
+    background-color: #484e52;
+    margin-top: 15px;
+    padding: 3px;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    height:30px;
+    width: 250px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #eee2e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.createbutton:hover {
+    transform: scale(1.1);
+}
+
+input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"] + label {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid #fefefe;
+    border-radius: 5px;
+    background-color: #484e52;
+    color: #eee2e2;
+  }
+  input[type="radio"]:checked + label {
+    background-color: #e0e0e0;
+    color: #484e52;
+    border: 2px solid #fefefe;
+    border-radius: 5px;
+  }
+
+h2 {
+    color: #eee2e2;
+    margin-top: 15px;
+}
+
+.containeraventurier {
+    padding: 30px;
+    background-color:rgb(51, 55, 51) ;
+    border: 1px solid #fefefe;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.imgtrainer  {
+    width: 100px;
+    height: 175px;
+}
+
+.imgstarter {
+    width: 75px;
+    height: 75px;
+}
+
+.h1profil {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.buttonmodif {
+    background-color: #484e52;
+    margin-top: 15px;
+    padding: 3px;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    height:30px;
+    width: 180px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #eee2e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.h1nom {
+    color: #eee2e2;
+    font-size: 40px;
+    padding-left: 20px;
+    margin:0;
+    padding: 0;
+}
+
+.h2age {
+    color: #eee2e2;
+    font-size: 15px;
+    padding-left: 20px;
+    margin:0;
+    padding: 0;
+}
+
+.containernomage {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.dateandbutton {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 20px;
+    text-align: center;
+    color: #eee2e2;
+}
+
+.h2date {
+    color: #eee2e2;
+    font-size: 15px;
+    padding-top: 10px;
+    
+}
+
+.testwrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rectanglemodify {
+    padding-top: 80px;
+    background-color: #484e52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containermodify {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px   ;
+}
+
+.buttonmodify {
+    background-color: #484e52;
+    margin-top: 15px;
+    padding: 3px;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    height:30px;
+    width: 200px;
+    font-weight: 900;
+    cursor: pointer;
+    color: #eee2e2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.buttonmodify:hover {
+    transform: scale(1.1);
+}

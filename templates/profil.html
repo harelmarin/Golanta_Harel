@@ -6,18 +6,36 @@
     <meta http-equiv="X-UA-Compatible" content ="IE-edge">
     <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css" />
-    <title>PROFIL</title> 
+    <link rel="stylesheet" href="/static/css/base.css" />
+        <title>PROFIL</title> 
 </head>
+<header> 
+    <a href="/index"> <button class="headerbutton "> Créer un aventurier </button> </a> <br>
+    <a href="/profil"> <button class="headerbutton "> Liste des aventuriers</button> </a> <br>
+    <img class="header-title"src="/static/img/Pokegolantav2.png">
+    <div class="containerpoke">
+    <div class="pokeball"></div>
+</div>
+</header>
 <body>
+    <h1 class="h1profil"> Liste des Aventuriers : </h1>
+<section class="testwrap">
 {{range .Aventuriers}}
-
-Nom : {{.Nom}} <br>
-Age : {{.Age}}<br> 
-ID  : {{.ID}}<br>
-
-<a href="/deleteaventurier?aventurier={{.ID}}"> <button> Supprimer l'Aventurier </button> </a> <br>
-<a href="/modifyaventurier?aventurier={{.ID}}"> <button> Modifier l'Aventurier </button> </a> <br>
+<div class="containeraventurier">
+   <img class="imgtrainer" src="{{.ImgTrainer}}">
+   <div class="containernomage">
+   <h1 class="h1nom">{{.Nom}} </h1><br>
+    <h2 class="h2age">Age : {{.Age}}</h2><br> 
+    <img class="imgstarter"src="{{.ImgStarter}}">
+    </div>
+    <div class="dateandbutton">
+<a href="/deleteaventurier?aventurier={{.ID}}"> <button class="buttonmodif"> Supprimer l'Aventurier </button> </a> 
+<a href="/modifyaventurier?aventurier={{.ID}}"> <button class="buttonmodif"> Modifier l'Aventurier </button> </a> 
+<h2 class="h2date">Création : {{.Date}}</h2>
+</div>
+</div>
 {{end}}
-<a href="/index"> <button> Créer un nouveau personnage </button> </a> <br>
+</section>
+<a href="/index"> <button class="buttonmodif"> Créer un nouveau personnage </button> </a> <br>
 </body>
 {{end}}

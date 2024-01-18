@@ -5,17 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content ="IE-edge">
     <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/base.css" />
     <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="/static/js/main.js"  defer></script>
     <title>INDEX</title>
 </head>
+<header> 
+    <a href="/index"> <button class="headerbutton "> Créer un aventurier </button> </a> <br>
+    <a href="/profil"> <button class="headerbutton "> Liste des aventuriers</button> </a> <br>
+    <img class="header-title"src="/static/img/Pokegolantav2.png">
+    <div class="containerpoke">
+    <div class="pokeball"></div>
+</div>
+</header>
 <body>
-    
-    <form action="/treatment/index" class="form" method="post">
-<input type="text" id="Nom" name="Nom" placeholder="Nom" required/>
-<input type="text" id="age" name="age" placeholder="age" required/>
-<button type="submit">Créer le Personnage</button> </form> <br> 
+    <div class="rectanglecreate">
+    <form class="formcreate" action="/treatment/index" class="form" method="post">
+        <h1> Créer votre aventurier : </h1>
+        <div class="inputcreate">
+<input class="name" type="text" id="Nom" name="Nom" placeholder="Nom"  autocomplete="off" required/>
+<input class="age" type="number" id="age" name="age" placeholder="age"  autocomplete="off" required/>
+        </div>
+        <h2> Veuillez choisir : </h2>
+        <div class="choixstarter">  
+<input type="radio" id="starter1" name="starter"  value="Bulbizarre" placeholder="Bulbizarre" required/>
+<label for="starter1">Bulbizarre</label>
+<input  type="radio" id="starter2" name="starter"   value="Salamèche" placeholder="Salamèche"required/>
+<label for="starter2">Salamèche</label>
+<input  type="radio" id="starter3" name="starter"   value="Carapuce" placeholder="Carapuce" required/>
+<label for="starter3">Carapuce</label>
+</div>
+<button class="createbutton" type="submit">Créer le Personnage</button> </form> 
 
-    
 </body>
 {{end}}
 
