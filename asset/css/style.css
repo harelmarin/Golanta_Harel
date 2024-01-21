@@ -1,9 +1,13 @@
-body {
-    background-color: #484e52;
+body  {
+    background-image: url(../img/LantaBG.jpg);
+    background-position: 90%;
+    background-size: 100%;
+    filter: blur(30);
+    opacity: 90%;
 }
 .rectanglecreate{
     padding-top: 80px;
-    background-color: #484e52;
+    filter: blur(30);
     display: flex;
     justify-content: center;
 }
@@ -195,7 +199,6 @@ h2 {
 
 .rectanglemodify {
     padding-top: 80px;
-    background-color: #484e52;
     display: flex;
     justify-content: center;
     align-items: center;
