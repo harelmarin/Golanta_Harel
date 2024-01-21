@@ -42,6 +42,7 @@ func TreatmentDelete(w http.ResponseWriter, r *http.Request) {
 }
 
 func DataModify(w http.ResponseWriter, r *http.Request) {
+
 	id, err := strconv.Atoi(r.URL.Query().Get("aventurier"))
 	if err != nil {
 		log.Fatal("log: articleHandler() strconv.Atoi error!\n", err)

@@ -15,7 +15,6 @@ func Serveur() {
 	http.HandleFunc("/deleteaventurier", controller.TreatmentDelete)
 	http.HandleFunc("/modifyaventurier", controller.DataModify)
 	http.HandleFunc("/treatment/modifyaventurier", controller.TreatmentModify)
-
 	rootDoc, _ := os.Getwd()
 	fileserver := http.FileServer(http.Dir(rootDoc + "/asset"))
 	http.Handle("/static/", http.StripPrefix("/static/", fileserver))
@@ -29,8 +28,6 @@ func runServer() {
 	go http.ListenAndServe(port, nil)
 	fmt.Println("Server is running...")
 	time.Sleep(time.Second * 3)
-	//cmd := exec.Command("explorer", url)
-	//cmd.Run()
 	fmt.Println("If the navigator didn't open on its own, just go to ", url, " on your browser.")
 	isRunning := true
 	for isRunning {
